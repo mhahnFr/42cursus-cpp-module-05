@@ -32,6 +32,10 @@ Form::~Form() {}
 
 void Form::beSigned(Bureaucrat &signer) throw(GradeTooLowException) {
     if (signer.getGrade() > getSignGrade()) throw GradeTooLowException();
+	if (hasBeenSigned) {
+		std::cout << *this << " is already signed!" << std::endl;
+		return;
+	}
     hasBeenSigned = true;
 }
 
