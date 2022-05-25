@@ -18,7 +18,6 @@ Bureaucrat::~Bureaucrat() {}
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other) {
     if (&other != this) {
-        name = other.getName();
         grade = other.getGrade();
     }
     return *this;
